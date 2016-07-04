@@ -87,7 +87,7 @@ testlibsdl () {
 	fi
 	
 	if [ "$LIBSDL" = "" -a -f "$1" ]; then
-		if [ "`file -b "$1" | grep "ELF 32-bit LSB shared object"`" != "" ]; then
+		if [ "`file -b "$1" | grep "ELF 32-bit LSB[[:space:]]*shared object"`" != "" ]; then
 			info "32-bit libSDL.so is installed to $1"
 			LIBSDL="$1"
 		fi
